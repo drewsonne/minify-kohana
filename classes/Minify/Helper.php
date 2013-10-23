@@ -28,11 +28,11 @@ class Minify_Helper
         if ($debug) {
             $group = $groupsConfig[$group];
             return array_reduce($group, function ($result, $object) use ($type) {
-                $result .= Kohana_Html::$type($object) . "\n";
+                $result .= Kohana_HTML::$type($object) . "\n";
                 echo($result);
             }, '');
         } else {
-            return Kohana_Html::$type("min/{$group}");
+            return Kohana_HTML::$type("min/{$group}");
         }
     }
 
